@@ -1,43 +1,27 @@
 # 🍽️ Cardápio da Semana — Refeitório Matriz Assaí (PWA)
 
-App do cardápio semanal do refeitório da Matriz do Assaí Atacadista.
-
 ## 📂 Estrutura
-```
-cardapio-assai/
-├── index.html          → página principal
-├── manifest.json       → configuração do app (PWA)
-├── sw.js               → service worker (instalação + offline)
-├── css/style.css       → visual, grid, responsividade e tema secreto
-├── js/script.js        → filtro, destaque do dia, efeitos, PWA e easter egg
-└── assets/
-    ├── logo-assai.png          → logo oficial (transparente)
-    ├── aero-wallpaper.jpg      → wallpaper do modo secreto
-    ├── icon-192.png            → ícone do app
-    ├── icon-512.png            → ícone do app
-    ├── icon-maskable-512.png   → ícone adaptável (Android)
-    └── apple-touch-icon.png    → ícone do app (iOS)
-```
+index.html · manifest.json · sw.js · css/style.css · js/script.js
+assets/ (logo-assai.png, aero-wallpaper.jpg, ícones do app)
 
-## ⚠️ IMPORTANTE — o PWA só funciona via HTTPS
-O "instalar" e o offline só funcionam quando servido pelo **Netlify** (https),
-NÃO abrindo o index.html direto do arquivo (file://). No Netlify já funciona.
+## 🖥️ Desktop (≥1000px)
+- HERO do dia de hoje em destaque no topo (largo, 5 seções lado a lado).
+- Abaixo, a grade "A semana inteira" com os 5 dias.
+- Abas no topo trocam o dia mostrado no hero.
 
-## 📲 Como instalar no celular
-- **Android (Chrome):** aparece o botão "Instalar app" na tela OU menu ⋮ →
-  "Adicionar à tela inicial".
-- **iPhone (Safari):** botão Compartilhar → "Adicionar à Tela de Início".
-Depois disso o site abre em tela cheia, com ícone do Assaí, como um app.
+## 📱 Mobile / Tablet (≤999px)
+- Abre já no CARD DE HOJE.
+- Carrossel horizontal: arraste para o lado para ver os outros dias.
+- Bolinhas (dots) e abas indicam/navegam entre os dias. Sem scroll vertical de pilha.
 
-## 🖥️ Layout
-- Desktop (≥1000px): 5 dias lado a lado. Tablet: 2–3 colunas. Celular: 1 coluna.
+## 📲 PWA (instalável) — só via HTTPS (Netlify)
+Android: botão "Instalar app" / menu ⋮ → Adicionar à tela inicial.
+iPhone: Compartilhar → Adicionar à Tela de Início.
+Ao publicar update grande, suba a versão no sw.js (v2 → v3).
 
 ## ✏️ Atualizar (toda segunda)
-1. Troque o banner `Semana de 10/08` no index.html.
-2. Edite os itens de cada dia.
-3. IMPORTANTE: ao publicar update grande, suba o número da versão em sw.js
-   (CACHE = 'cardapio-assai-v2') para forçar a atualização do cache.
+Trocar banner "Semana de 10/08" e editar os itens de cada dia no index.html.
+O hero e o carrossel se atualizam sozinhos a partir dos cards.
 
 ## 🤫 Modo secreto Frutiger Aero (Y2K + shitpost)
-Ativa/desativa: logo do Assaí 3x · Konami (↑↑↓↓←→←→BA) · cantinho invisível
-inferior direito (3 toques).
+Logo do Assaí 3x · Konami (↑↑↓↓←→←→BA) · cantinho invisível inferior direito (3 toques).

@@ -35,7 +35,26 @@
   <button id="installBtn"><span class="ic">📲</span> Instalar app</button>
 </header>
 
+<nav class="tabs">
+  <button class="tab" data-day="all">✨ Hoje</button>
+  <button class="tab" data-day="seg">Segunda</button>
+  <button class="tab" data-day="ter">Terça</button>
+  <button class="tab" data-day="qua">Quarta</button>
+  <button class="tab" data-day="qui">Quinta</button>
+  <button class="tab" data-day="sex">Sexta</button>
+</nav>
+
 <main class="container">
+
+  <!-- ⭐ DIA EM DESTAQUE (desktop) -->
+  <section id="hero"></section>
+
+  <!-- dica de arrastar (mobile) -->
+  <div id="swipeHint">👈 arraste para ver os outros dias 👉</div>
+
+  <!-- rótulo da grade (desktop) -->
+  <div class="grid-label">📅 A semana inteira</div>
+
   <div class="grid">
 
     <!-- SEGUNDA -->
@@ -129,6 +148,10 @@
     </article>
 
   </div>
+
+  <!-- indicador do carrossel (mobile) -->
+  <div id="dots"></div>
+
 </main>
 
 <footer>
