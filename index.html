@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Cardápio da Semana · Refeitório Matriz Assaí</title>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#E30613">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cardápio Assaí">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="assets/icon-192.png">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="bg-grain"></div>
+<div class="floaties" id="floaties"></div>
+
+<div class="logo-assai">
+  <img src="assets/logo-assai.png" alt="Assaí Atacadista">
+</div>
+
+<header>
+  <div class="badge">🍽️ Refeitório · Matriz</div>
+  <h1>Cardápio da Semana</h1>
+  <div class="week-banner"><span class="cal">📅</span> Semana de 10/08</div>
+  <p id="hojeTxt">Sabor de verdade, de segunda a sexta-feira</p>
+  <button id="installBtn"><span class="ic">📲</span> Instalar app</button>
+</header>
+
+<main class="container">
+  <div class="grid">
+
+    <!-- SEGUNDA -->
+    <article class="day-card" data-day="seg" data-dow="1">
+      <div class="today-flag">Hoje</div>
+      <div class="day-head"><span class="emoji-day">🥩</span><div><small>Dia 1</small><h2>Segunda</h2></div></div>
+      <div class="day-body">
+        <div class="section"><div class="section-title"><span class="pill p-prato">🍛</span>Prato Principal</div>
+          <ul><li class="main">Strogonoff de Carne</li><li class="main">Frango Xadrez</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-acomp">🍚</span>Acompanhamentos</div>
+          <ul><li>Arroz de Forno</li><li>Arroz Branco / Integral</li><li>Feijão Carioca</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-salada">🥗</span>Saladas</div>
+          <ul><li>Folhas Mistas</li><li>Tomate</li><li>Pepino c/ Rabanete</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-suco">🧃</span>Sucos</div>
+          <ul><li>Limão</li><li>Maçã</li><li>Laranja</li><li>Abacaxi</li><li>Goiaba</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-sobremesa">🍮</span>Sobremesa</div>
+          <ul><li>Gelatina</li><li>Melancia</li></ul></div>
+      </div>
+    </article>
+
+    <!-- TERÇA -->
+    <article class="day-card" data-day="ter" data-dow="2">
+      <div class="today-flag">Hoje</div>
+      <div class="day-head"><span class="emoji-day">🍗</span><div><small>Dia 2</small><h2>Terça</h2></div></div>
+      <div class="day-body">
+        <div class="section"><div class="section-title"><span class="pill p-prato">🍛</span>Prato Principal</div>
+          <ul><li class="main">Filé de Sobrecoxa Assada</li><li class="main">Arroz com Maminha Desfiada</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-acomp">🍚</span>Acompanhamentos</div>
+          <ul><li>Chuchu com Cenoura</li><li>Arroz Branco / Integral</li><li>Feijão Carioca</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-salada">🥗</span>Saladas</div>
+          <ul><li>Alface Crespa</li><li>Beterraba Cozida</li><li>Feijão Branco c/ Alho Poró</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-suco">🧃</span>Sucos</div>
+          <ul><li>Limão</li><li>Maçã</li><li>Laranja</li><li>Abacaxi</li><li>Goiaba</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-sobremesa">🍮</span>Sobremesa</div>
+          <ul><li>Creme de Goiabada</li></ul></div>
+      </div>
+    </article>
+
+    <!-- QUARTA -->
+    <article class="day-card" data-day="qua" data-dow="3">
+      <div class="today-flag">Hoje</div>
+      <div class="day-head"><span class="emoji-day">🍖</span><div><small>Dia 3</small><h2>Quarta</h2></div></div>
+      <div class="day-body">
+        <div class="section"><div class="section-title"><span class="pill p-prato">🍛</span>Prato Principal</div>
+          <ul><li class="main">Pernil Assado ao Molho de Laranja</li><li class="main">Yakissoba de Frango com Legumes</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-acomp">🍚</span>Acompanhamentos</div>
+          <ul><li>Rodelas de Abobrinha ao Alho</li><li>Arroz Branco / Integral</li><li>Feijão Carioca</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-salada">🥗</span>Saladas</div>
+          <ul><li>Couve Manteiga</li><li>Tabule</li><li>Ovo Cozido</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-suco">🧃</span>Sucos</div>
+          <ul><li>Limão</li><li>Maçã</li><li>Laranja</li><li>Abacaxi</li><li>Goiaba</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-sobremesa">🍮</span>Sobremesa</div>
+          <ul><li>Mousse de Maracujá</li></ul></div>
+      </div>
+    </article>
+
+    <!-- QUINTA -->
+    <article class="day-card" data-day="qui" data-dow="4">
+      <div class="today-flag">Hoje</div>
+      <div class="day-head"><span class="emoji-day">🥩</span><div><small>Dia 4</small><h2>Quinta</h2></div></div>
+      <div class="day-body">
+        <div class="section"><div class="section-title"><span class="pill p-prato">🍛</span>Prato Principal</div>
+          <ul><li class="main">Bife Grelhado</li><li class="main">Omelete de Peito de Peru</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-acomp">🍚</span>Acompanhamentos</div>
+          <ul><li>Purê de Abóbora</li><li>Arroz Branco / Integral</li><li>Feijão Carioca</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-salada">🥗</span>Saladas</div>
+          <ul><li>Escarola com Radicchio</li><li>Berinjela</li><li>Salpicão de Salsicha</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-suco">🧃</span>Sucos</div>
+          <ul><li>Limão</li><li>Maçã</li><li>Laranja</li><li>Guaraná</li><li>Goiaba</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-sobremesa">🍮</span>Sobremesa</div>
+          <ul><li>Manjar com Calda de Morango</li></ul></div>
+      </div>
+    </article>
+
+    <!-- SEXTA -->
+    <article class="day-card" data-day="sex" data-dow="5">
+      <div class="today-flag">Hoje</div>
+      <div class="day-head"><span class="emoji-day">🍲</span><div><small>Dia 5</small><h2>Sexta</h2></div></div>
+      <div class="day-body">
+        <div class="section"><div class="section-title"><span class="pill p-prato">🍛</span>Prato Principal</div>
+          <ul><li class="main">Galinhada</li><li class="main">Linguiça Toscana Acebolada</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-acomp">🍚</span>Acompanhamentos</div>
+          <ul><li>Farofa de Cuscuz</li><li>Arroz Branco / Integral</li><li>Feijão Carioca</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-salada">🥗</span>Saladas</div>
+          <ul><li>Folhas Mistas</li><li>Vinagrete</li><li>Cenoura Ralada</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-suco">🧃</span>Sucos</div>
+          <ul><li>Limão</li><li>Maçã</li><li>Laranja</li><li>Guaraná</li><li>Goiaba</li></ul></div>
+        <div class="section"><div class="section-title"><span class="pill p-sobremesa">🍮</span>Sobremesa</div>
+          <ul><li>Pavê de Chocolate</li></ul></div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="fbox">
+    Refeitório da <strong>Matriz Assaí Atacadista</strong><br>
+    Cardápio sujeito a alterações conforme disponibilidade.
+    <div class="dots">• • •</div>
+  </div>
+</footer>
+
+<!-- 🤫 botão secreto: cantinho invisível (3 toques) -->
+<div class="secret-spot" title=""></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
