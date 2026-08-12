@@ -1,4 +1,4 @@
-const CACHE = 'cardapio-assai-v2';
+const CACHE = 'cardapio-assai-v3';
 const ASSETS = ['./','./index.html','./css/style.css','./js/script.js','./manifest.json',
   './assets/logo-assai.png','./assets/aero-wallpaper.jpg','./assets/icon-192.png',
   './assets/icon-512.png','./assets/icon-maskable-512.png','./assets/apple-touch-icon.png'];

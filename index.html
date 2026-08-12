@@ -36,13 +36,23 @@
 </header>
 
 <nav class="tabs">
-  <button class="tab" data-day="all">✨ Hoje</button>
+  <button class="tab" data-day="all">✨ Destaque</button>
   <button class="tab" data-day="seg">Segunda</button>
   <button class="tab" data-day="ter">Terça</button>
   <button class="tab" data-day="qua">Quarta</button>
   <button class="tab" data-day="qui">Quinta</button>
   <button class="tab" data-day="sex">Sexta</button>
 </nav>
+
+<!-- 🚫 tela exibida quando o cardápio da semana ainda não foi atualizado -->
+<section id="notReady">
+  <div class="nr-card">
+    <div class="nr-emoji">🍽️😴</div>
+    <h2>Cardápio da semana não atualizado ainda</h2>
+    <p>O cardápio desta semana ainda não foi publicado. Assim que a nova semana for atualizada, ele aparece aqui automaticamente.</p>
+    <div class="nr-chip">📅 Volte na segunda-feira</div>
+  </div>
+</section>
 
 <main class="container">
 
