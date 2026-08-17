@@ -183,19 +183,59 @@ let rsz = null;
 window.addEventListener('resize', () => { clearTimeout(rsz); rsz = setTimeout(() => { if (isCarousel()) { scrollToCard(heroKey, false); updateDots(); } }, 200); });
 
 /* ==================================================================
-   📱 PWA — service worker + botão "Instalar"
+   📱 PWA — registro do service worker + ATUALIZAÇÃO AUTOMÁTICA
+   Substitua o bloco atual de registro do SW no seu js/script.js por este.
    ================================================================== */
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').then((reg) => {
+      // procura por uma versão nova sempre que a página abre
+      reg.update();
+
+      reg.addEventListener('updatefound', () => {
+        const novo = reg.installing;
+        if (!novo) return;
+        novo.addEventListener('statechange', () => {
+          // já existe um SW controlando E o novo terminou de instalar → ativa na hora
+          if (novo.state === 'installed' && navigator.serviceWorker.controller) {
+            novo.postMessage('SKIP_WAITING');
+          }
+        });
+      });
+    }).catch(() => {});
+  });
+
+  // quando o novo SW assume o controle, recarrega a página UMA vez
+  let recarregando = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (recarregando) return;
+    recarregando = true;
+    window.location.reload();
+  });
 }
+
+/* ----- resto do seu bloco PWA (botão instalar) continua igual ----- */
 let deferredPrompt = null;
 const installBtn = document.getElementById('installBtn');
-window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; if (installBtn) installBtn.classList.add('show'); });
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if (installBtn) installBtn.classList.add('show');
+});
 if (installBtn) {
-  installBtn.addEventListener('click', async () => { if (!deferredPrompt) return; deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt = null; installBtn.classList.remove('show'); });
+  installBtn.addEventListener('click', async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    installBtn.classList.remove('show');
+  });
 }
 window.addEventListener('appinstalled', () => { if (installBtn) installBtn.classList.remove('show'); });
-if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) { if (installBtn) installBtn.classList.remove('show'); }
+if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) {
+  if (installBtn) installBtn.classList.remove('show');
+}
+
 
 /* ==================================================================
    🫧✨ MODO SECRETO FRUTIGER AERO / Y2K SHITPOST
