@@ -5,7 +5,7 @@
    Depois dessa data (sábado em diante) o site mostra
    "cardápio da semana não atualizado ainda" até o novo cardápio.
    ================================================================== */
-const MENU_VALIDADE = new Date('2026-09-11T23:59:59'); // sexta da "Semana de 10/08"
+const MENU_VALIDADE = new Date('2026-09-18T23:59:59'); // sexta da "Semana de 10/08"
 const HORA_VIRA_AMANHA = 15; // a partir das 15h, o hero mostra o dia seguinte
 /* ================================================================== */
 
