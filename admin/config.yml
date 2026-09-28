@@ -20,7 +20,7 @@ collections:
           - label: Semana exibida
             name: weekLabel
             widget: string
-            hint: Exemplo: Semana de 05/10
+            hint: Exemplo- Semana de 05/10
           - label: Validade do cardápio
             name: validUntil
             widget: datetime
