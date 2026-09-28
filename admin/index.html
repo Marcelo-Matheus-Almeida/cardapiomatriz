@@ -3,9 +3,55 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Editar cardápio</title>
+    <meta name="theme-color" content="#0a1b3d">
+    <title>Painel do cardápio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/netlify-auth-providers"></script>
+    <script type="module" src="upload.js"></script>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <main class="panel">
+      <header class="panel-header">
+        <a class="back" href="../">← Voltar ao cardápio</a>
+        <span class="eyebrow">REFEITÓRIO · MATRIZ</span>
+        <h1>Atualizar cardápio</h1>
+        <p>Envie o JSON pronto, confira a prévia e aprove para publicar no site.</p>
+      </header>
+
+      <section class="box access-box" aria-labelledby="accessTitle">
+        <div>
+          <h2 id="accessTitle">Acesso ao repositório</h2>
+          <p id="authStatus">Entre com sua conta GitHub para poder publicar.</p>
+        </div>
+        <button id="loginButton" class="button secondary" type="button">Conectar GitHub</button>
+      </section>
+
+      <section class="box upload-box" aria-labelledby="uploadTitle">
+        <h2 id="uploadTitle">1. Selecione o arquivo</h2>
+        <p>Use um arquivo JSON no formato do exemplo. A seleção não publica nada.</p>
+        <label id="dropZone" class="drop-zone" for="fileInput">
+          <span class="upload-icon">↑</span>
+          <strong>Escolher arquivo JSON</strong>
+          <span id="fileName">ou arraste o arquivo para esta área</span>
+          <input id="fileInput" type="file" accept="application/json,.json">
+        </label>
+        <a class="template-link" href="../data/cardapio.json" download="modelo-cardapio.json">Baixar exemplo de JSON</a>
+        <p id="fileStatus" class="status" role="status"></p>
+      </section>
+
+      <section id="previewSection" class="preview-section" hidden aria-labelledby="previewTitle">
+        <div class="preview-heading">
+          <div>
+            <h2 id="previewTitle">2. Confira antes de publicar</h2>
+            <p id="previewMeta"></p>
+          </div>
+          <button id="publishButton" class="button primary" type="button" disabled>Aprovar e enviar ao GitHub</button>
+        </div>
+        <div id="preview" class="preview-grid"></div>
+      </section>
+
+      <p id="publishStatus" class="publish-status" role="status" aria-live="polite"></p>
+      <footer>Ao aprovar, o painel cria um commit no branch <code>main</code>. A Netlify detecta o commit e inicia a publicação do site.</footer>
+    </main>
   </body>
 </html>

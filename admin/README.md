@@ -1,17 +1,27 @@
-# Painel do cardápio
+# Painel de envio do cardápio
 
-O painel fica em `/admin/` e usa o Decap CMS para gravar `data/cardapio.json` no branch `main` do GitHub. Cada publicação cria um commit e a integração existente da Netlify inicia o deploy.
+O painel em `/admin/` recebe um arquivo JSON pronto. Ele valida a estrutura, mostra uma prévia e só altera o repositório depois que você clicar em **Aprovar e enviar ao GitHub**, informar a versão e confirmar a ação.
 
-## Configuração única da autenticação
+## Formato do arquivo
 
-O painel usa o provedor GitHub da Netlify. A conta que entrar precisa ter permissão de escrita no repositório `Marcelo-Matheus-Almeida/cardapiomatriz`.
+Use `data/cardapio.json` como exemplo para preparar as próximas semanas. O arquivo que você envia precisa ter o rótulo da semana, a validade e os cinco dias úteis. Cada dia contém as categorias nesta ordem: prato principal, acompanhamentos, saladas, sucos e sobremesa. A validade deve ser um horário ISO com fuso, por exemplo `2026-10-02T23:59:59-03:00`. Você não precisa incluir `appVersion` no arquivo enviado.
 
-1. No GitHub, crie uma OAuth App em **Settings → Developer settings → OAuth Apps**. Use a URL pública do site como Homepage URL e `https://api.netlify.com/auth/done` como Authorization callback URL.
+O campo `main` foi removido do formato. O painel ignora esse campo caso apareça em um JSON antigo e não o grava no arquivo publicado. O destaque visual dos pratos principais vem do tipo da categoria (`prato`).
+
+## Publicar uma semana
+
+1. Abra `/admin/` e clique em **Conectar GitHub**.
+2. Selecione o arquivo JSON preparado. O painel valida o conteúdo e mostra a prévia; até aqui o Git não foi alterado.
+3. Confira semana, validade e pratos. Clique em **Aprovar e enviar ao GitHub** e informe a nova versão do app quando o popup pedir. Ela precisa ser diferente da versão atual.
+4. Confirme a publicação. O painel acrescenta `appVersion` ao JSON e grava o arquivo no branch `main` do repositório `Marcelo-Matheus-Almeida/cardapiomatriz`. Esse envio cria um commit; a Netlify detecta a mudança e inicia o deploy.
+5. Ao abrir o app, o service worker lê `appVersion` do JSON. Se mudou, cria um cache com essa versão e remove o cache anterior. Não é necessário editar `sw.js` toda semana.
+
+## Configurar o login uma vez
+
+A conta GitHub usada no painel precisa ter permissão de escrita nesse repositório.
+
+1. No GitHub, crie uma OAuth App em **Settings → Developer settings → OAuth Apps**. Use o domínio público do site como Homepage URL e `https://api.netlify.com/auth/done` como Authorization callback URL.
 2. Na Netlify, abra **Project configuration → Security → OAuth**, instale o provedor GitHub e informe o Client ID e o Client Secret da OAuth App.
-3. Depois do deploy, abra `https://SEU-DOMINIO/admin/`, entre com uma conta GitHub que tenha acesso de escrita ao repositório e edite **Cardápio semanal → Semana atual**.
+3. Publique o projeto. Acesse `https://SEU-DOMINIO/admin/` e conecte a conta GitHub.
 
-Git Gateway não é usado. A Netlify marcou esse serviço como depreciado e não recomenda novas configurações.
-
-## Atualização semanal
-
-No formulário, edite o rótulo da semana, a validade e os pratos. A validade deve ser sexta-feira às 23:59 no horário de Brasília. Publique; o commit no branch `main` dispara a publicação automática do site.
+O token de acesso é mantido apenas na memória da página enquanto o painel está aberto. Git Gateway e o editor Decap não são usados.

@@ -126,9 +126,9 @@ Após instalado, abre em tela cheia, com ícone próprio, como um aplicativo nat
 
 ## Atualização do cardápio
 
-Edite o cardápio em data/cardapio.json ou use o painel em /admin/. O painel grava as alterações no branch main do GitHub e a Netlify publica o novo deploy automaticamente. O arquivo contém os pratos, o rótulo da semana e a validade do cardápio.
+Edite o cardápio no arquivo data/cardapio.json e envie o JSON pelo painel /admin/. O painel mostra uma prévia, pergunta a nova versão do app e, após sua aprovação, grava a alteração no branch main do GitHub. A Netlify publica o novo deploy automaticamente.
 
-Para configurar o acesso ao painel pela primeira vez, consulte admin/README.md.
+Consulte admin/README.md para configurar o login e ver o passo a passo.
 
 ---
 

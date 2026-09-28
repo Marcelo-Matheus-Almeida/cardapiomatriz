@@ -16,8 +16,8 @@ const htmlSafe = (value) => String(value).replace(/[&<>"']/g, (char) => ({
 })[char]);
 const DAY_DOW = { seg: 1, ter: 2, qua: 3, qui: 4, sex: 5 };
 const sectionHTML = (section) =>
-  '<div class="section"><div class="section-title"><span class="pill p-' + htmlSafe(section.type) + '">' + htmlSafe(section.emoji) + '</span>' + htmlSafe(section.title) + '</div>' +
-  '<ul>' + section.items.map((item) => '<li' + (section.main ? ' class="main"' : '') + '>' + htmlSafe(item) + '</li>').join('') + '</ul></div>';
+  '<div class="section" data-type="' + htmlSafe(section.type) + '"><div class="section-title"><span class="pill p-' + htmlSafe(section.type) + '">' + htmlSafe(section.emoji) + '</span>' + htmlSafe(section.title) + '</div>' +
+  '<ul>' + section.items.map((item) => '<li>' + htmlSafe(item) + '</li>').join('') + '</ul></div>';
 const cardHTML = (day) =>
   '<article class="day-card" data-day="' + htmlSafe(day.key) + '" data-dow="' + DAY_DOW[day.key] + '">' +
     '<div class="today-flag">Hoje</div>' +

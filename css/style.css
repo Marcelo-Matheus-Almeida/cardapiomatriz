@@ -78,7 +78,7 @@ header p{margin-top:14px;font-size:1.1rem;opacity:.9;font-weight:500;}
 .hero-sections .section:last-child{border-right:none;}
 .hero-sections .section-title{margin-bottom:12px;}
 .hero-sections .section li{font-size:1rem;padding:7px 0 7px 20px;}
-.hero-sections .section li.main{font-size:1.08rem;}
+.hero-sections .section[data-type="prato"] li{font-size:1.08rem;}
 .hero-sections .section li::before{top:14px;}
 
 /* ===== GRID DOS 5 DIAS ===== */
@@ -96,7 +96,7 @@ header p{margin-top:14px;font-size:1.1rem;opacity:.9;font-weight:500;}
   .grid .emoji-day{font-size:1.6rem;}
   .grid .section{padding:11px 0;}
   .grid .section li{font-size:.9rem;padding:4px 0 4px 20px;}
-  .grid .section li.main{font-size:.94rem;}
+  .grid .section[data-type="prato"] li{font-size:.94rem;}
 }
 
 .day-card{background:var(--glass);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--stroke);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 50px rgba(0,0,0,.28);transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s, background .5s;opacity:0;transform:translateY(40px) scale(.97);position:relative;}
@@ -125,8 +125,8 @@ header p{margin-top:14px;font-size:1.1rem;opacity:.9;font-weight:500;}
 .section li{position:relative;padding:6px 0 6px 22px;font-size:.96rem;transition:.25s;}
 .section li::before{content:"";position:absolute;left:0;top:12px;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);}
 .section li:hover{transform:translateX(5px);color:#FFE9B0;}
-.section li.main{font-weight:700;font-size:1.02rem;}
-.section li.main::before{background:var(--amarelo);box-shadow:0 0 10px var(--amarelo);}
+.section[data-type="prato"] li{font-weight:700;font-size:1.02rem;}
+.section[data-type="prato"] li::before{background:var(--amarelo);box-shadow:0 0 10px var(--amarelo);}
 
 /* ===== CARROSSEL: dicas e dots (mobile) ===== */
 #swipeHint{display:none;text-align:center;font-size:.85rem;opacity:.8;margin:6px 0 14px;font-weight:600;}
@@ -233,8 +233,8 @@ body.aero .section{border-bottom:1px solid rgba(0,90,160,.12);}
 body.aero .section-title{color:#0a6bb0;}
 body.aero .section li{color:#0b3a5b;}
 body.aero .section li::before{background:rgba(0,120,200,.5);}
-body.aero .section li.main{color:#05426b;font-family:'Comic Sans MS',cursive;}
-body.aero .section li.main::before{background:#1aa0ff;box-shadow:0 0 8px #6cc8ff;}
+body.aero .section[data-type="prato"] li{color:#05426b;font-family:'Comic Sans MS',cursive;}
+body.aero .section[data-type="prato"] li::before{background:#1aa0ff;box-shadow:0 0 8px #6cc8ff;}
 body.aero .section li:hover{color:#0a6bb0;}
 body.aero .pill{box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 4px 10px rgba(0,60,120,.25);}
 body.aero .nr-card p{color:#0b3a5b;}
