@@ -27,7 +27,7 @@ Um site leve, responsivo e instalável, com destaque automático para o cardápi
 - 🖥️ **Layout adaptativo** — no desktop, um *hero* largo do dia + a grade completa da semana; no mobile, carrossel horizontal com *swipe*.
 - 📲 **Instalável (PWA)** — pode ser adicionado à tela inicial e funciona **offline** via *service worker*.
 - 🎨 **Identidade visual Assaí** — paleta oficial da marca, com fundo animado em *mesh gradient* e cartões em *glassmorphism*.
-- ⚡ **Zero dependências** — HTML, CSS e JavaScript puro (*vanilla*). Sem frameworks, sem *build*.
+- ⚡ **Site público sem dependências de build** — HTML, CSS e JavaScript puro. O painel `/admin/` carrega bibliotecas externas para login e OCR quando é usado.
 - 🥚 **Easter egg secreto** — um tema alternativo escondido, ativado por combinações ocultas.
 
 ---

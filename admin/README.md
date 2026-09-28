@@ -1,20 +1,23 @@
 # Painel de envio do cardápio
 
-O painel em `/admin/` recebe um arquivo JSON pronto. Ele valida a estrutura, mostra uma prévia e só altera o repositório depois que você clicar em **Aprovar e enviar ao GitHub**, informar a versão e confirmar a ação.
+O painel em `/admin/` recebe a imagem do cardápio e tenta montar o JSON automaticamente. Também aceita um JSON pronto. Ele mostra uma prévia editável e só altera o repositório depois que você aprova, informa a versão do app e confirma a ação.
+
+Na leitura de imagem, o painel processa o arquivo no navegador usando OCR em português; a imagem original não é enviada ao GitHub. Para melhorar a leitura, envie a tabela inteira, na horizontal e fotografada o mais de frente possível. A leitura usa a disposição em cinco colunas e cinco faixas da imagem de referência.
 
 ## Formato do arquivo
 
-Use `data/cardapio.json` como exemplo para preparar as próximas semanas. O arquivo que você envia precisa ter o rótulo da semana, a validade e os cinco dias úteis. Cada dia contém as categorias nesta ordem: prato principal, acompanhamentos, saladas, sucos e sobremesa. A validade deve ser um horário ISO com fuso, por exemplo `2026-10-02T23:59:59-03:00`. Você não precisa incluir `appVersion` no arquivo enviado.
+O exemplo `data/cardapio.json` mostra a estrutura do JSON. A imagem não inclui semana nem validade; o painel sugere a semana atual e sexta-feira às 23:59. Confira ou ajuste esses campos na prévia antes de publicar. Se enviar um JSON, ele precisa conter semana, validade e os cinco dias úteis; a validade deve usar horário ISO com fuso, por exemplo `2026-10-02T23:59:59-03:00`. Você não precisa incluir `appVersion` no arquivo enviado.
 
 O campo `main` foi removido do formato. O painel ignora esse campo caso apareça em um JSON antigo e não o grava no arquivo publicado. O destaque visual dos pratos principais vem do tipo da categoria (`prato`).
 
 ## Publicar uma semana
 
 1. Abra `/admin/` e clique em **Conectar GitHub**.
-2. Selecione o arquivo JSON preparado. O painel valida o conteúdo e mostra a prévia; até aqui o Git não foi alterado.
-3. Confira semana, validade e pratos. Clique em **Aprovar e enviar ao GitHub** e informe a nova versão do app quando o popup pedir. Ela precisa ser diferente da versão atual.
-4. Confirme a publicação. O painel acrescenta `appVersion` ao JSON e grava o arquivo no branch `main` do repositório `Marcelo-Matheus-Almeida/cardapiomatriz`. Esse envio cria um commit; a Netlify detecta a mudança e inicia o deploy.
-5. Ao abrir o app, o service worker lê `appVersion` do JSON. Se mudou, cria um cache com essa versão e remove o cache anterior. Não é necessário editar `sw.js` toda semana.
+2. Selecione a imagem. O painel reconhece os textos e monta os pratos por dia e categoria; até aqui o Git não foi alterado.
+3. Confira os pratos na prévia. Clique em qualquer item para corrigir um erro do OCR. Confira também a semana e a validade sugeridas.
+4. Clique em **Aprovar e enviar ao GitHub**, informe uma versão diferente da atual quando o popup pedir e confirme.
+5. O painel acrescenta `appVersion` ao JSON e grava o arquivo no branch `main` do repositório `Marcelo-Matheus-Almeida/cardapiomatriz`. Esse envio cria um commit; a Netlify detecta a mudança e inicia o deploy.
+6. Ao abrir o app, o service worker lê `appVersion` do JSON. Se mudou, cria um cache com essa versão e remove o cache anterior. Não é necessário editar `sw.js` toda semana.
 
 ## Configurar o login uma vez
 

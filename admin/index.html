@@ -7,6 +7,7 @@
     <title>Painel do cardápio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/netlify-auth-providers"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
     <script type="module" src="upload.js"></script>
   </head>
   <body>
@@ -15,7 +16,7 @@
         <a class="back" href="../">← Voltar ao cardápio</a>
         <span class="eyebrow">REFEITÓRIO · MATRIZ</span>
         <h1>Atualizar cardápio</h1>
-        <p>Envie o JSON pronto, confira a prévia e aprove para publicar no site.</p>
+        <p>Envie a foto do cardápio. O painel lê os pratos, monta a prévia e prepara o JSON para publicação.</p>
       </header>
 
       <section class="box access-box" aria-labelledby="accessTitle">
@@ -27,13 +28,13 @@
       </section>
 
       <section class="box upload-box" aria-labelledby="uploadTitle">
-        <h2 id="uploadTitle">1. Selecione o arquivo</h2>
-        <p>Use um arquivo JSON no formato do exemplo. A seleção não publica nada.</p>
+        <h2 id="uploadTitle">1. Envie a imagem ou um JSON pronto</h2>
+        <p>A imagem é processada no navegador. O envio do arquivo não altera o Git.</p>
         <label id="dropZone" class="drop-zone" for="fileInput">
           <span class="upload-icon">↑</span>
-          <strong>Escolher arquivo JSON</strong>
+          <strong>Escolher imagem ou arquivo JSON</strong>
           <span id="fileName">ou arraste o arquivo para esta área</span>
-          <input id="fileInput" type="file" accept="application/json,.json">
+          <input id="fileInput" type="file" accept="image/*,application/json,.jpg,.jpeg,.png,.webp,.json">
         </label>
         <a class="template-link" href="../data/cardapio.json" download="modelo-cardapio.json">Baixar exemplo de JSON</a>
         <p id="fileStatus" class="status" role="status"></p>
@@ -42,11 +43,22 @@
       <section id="previewSection" class="preview-section" hidden aria-labelledby="previewTitle">
         <div class="preview-heading">
           <div>
-            <h2 id="previewTitle">2. Confira antes de publicar</h2>
+            <h2 id="previewTitle">2. Confira e corrija a leitura</h2>
             <p id="previewMeta"></p>
           </div>
           <button id="publishButton" class="button primary" type="button" disabled>Aprovar e enviar ao GitHub</button>
         </div>
+        <p class="edit-hint">Confira os pratos. Você pode clicar em qualquer item da prévia para corrigir uma palavra lida errado.</p>
+        <div class="schedule-fields">
+          <label>Semana exibida<input id="weekInput" type="text" placeholder="Semana de 05/10"></label>
+          <label>Data de validade<input id="validDateInput" type="date"></label>
+          <label>Horário<input id="validTimeInput" type="time" value="23:59"></label>
+          <p>A imagem não informa semana nem validade. Confira ou ajuste os valores sugeridos.</p>
+        </div>
+        <details id="imageDetails" class="image-details" hidden>
+          <summary>Ver imagem enviada</summary>
+          <img id="sourceImage" alt="Imagem do cardápio enviada para leitura">
+        </details>
         <div id="preview" class="preview-grid"></div>
       </section>
 
