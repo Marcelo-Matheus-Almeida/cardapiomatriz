@@ -1,16 +1,32 @@
-/* ==================================================================
-   ⚙️ CONFIG — ATUALIZAR TODA SEGUNDA AO TROCAR O CARDÁPIO
-   ------------------------------------------------------------------
-   MENU_VALIDADE = sexta-feira 23:59:59 da semana vigente.
-   Depois dessa data (sábado em diante) o site mostra
-   "cardápio da semana não atualizado ainda" até o novo cardápio.
-   ================================================================== */
-const MENU_VALIDADE = new Date('2026-10-02T23:59:59'); // sexta da "Semana de 10/08"
+/* O conteúdo e a validade do cardápio vêm de data/cardapio.json. */
+const MENU = await fetch('./data/cardapio.json', { cache: 'no-store' }).then((response) => {
+  if (!response.ok) throw new Error('Não foi possível carregar o cardápio.');
+  return response.json();
+});
+const MENU_VALIDADE = new Date(MENU.validUntil);
 const HORA_VIRA_AMANHA = 15; // a partir das 15h, o hero mostra o dia seguinte
 /* ================================================================== */
 
 /* ===== emojis flutuantes (modo normal) ===== */
 const em = ['🍎','🍊','🍋','🍚','🥗','🍗','🥩','🍮','🧃','🍅','🥕','🍲'];
+
+/* ===== cardápio carregado de data/cardapio.json ===== */
+const htmlSafe = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+})[char]);
+const DAY_DOW = { seg: 1, ter: 2, qua: 3, qui: 4, sex: 5 };
+const sectionHTML = (section) =>
+  '<div class="section"><div class="section-title"><span class="pill p-' + htmlSafe(section.type) + '">' + htmlSafe(section.emoji) + '</span>' + htmlSafe(section.title) + '</div>' +
+  '<ul>' + section.items.map((item) => '<li' + (section.main ? ' class="main"' : '') + '>' + htmlSafe(item) + '</li>').join('') + '</ul></div>';
+const cardHTML = (day) =>
+  '<article class="day-card" data-day="' + htmlSafe(day.key) + '" data-dow="' + DAY_DOW[day.key] + '">' +
+    '<div class="today-flag">Hoje</div>' +
+    '<div class="day-head"><span class="emoji-day">' + htmlSafe(day.emoji) + '</span><div><small>Dia ' + day.number + '</small><h2>' + htmlSafe(day.name) + '</h2></div></div>' +
+    '<div class="day-body">' + day.sections.map(sectionHTML).join('') + '</div>' +
+  '</article>';
+document.querySelector('.grid').innerHTML = MENU.days.map(cardHTML).join('');
+document.getElementById('weekLabel').textContent = MENU.weekLabel;
+
 const fl = document.getElementById('floaties');
 for (let i = 0; i < 16; i++) {
   const s = document.createElement('span');

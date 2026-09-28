@@ -2,7 +2,7 @@
 
 /* ⬆️ INCREMENTE a versão a CADA push (v4 → v5 → v6 ...). 
    É isso que força o navegador a baixar tudo de novo e limpar o cache antigo. */
-const VERSION = 'v9.0';
+const VERSION = 'v10.0';
 const CACHE = 'cardapio-assai-' + VERSION;
 
 const ASSETS = [
@@ -10,6 +10,7 @@ const ASSETS = [
   './index.html',
   './css/style.css',
   './js/script.js',
+  './data/cardapio.json',
   './manifest.json',
   './assets/logo-assai.png',
   './assets/aero-wallpaper.jpg',

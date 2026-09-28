@@ -124,14 +124,11 @@ Após instalado, abre em tela cheia, com ícone próprio, como um aplicativo nat
 
 ---
 
-## 🔄 Atualização do cardápio
+## Atualização do cardápio
 
-O conteúdo é editado diretamente no `index.html`:
+Edite o cardápio em data/cardapio.json ou use o painel em /admin/. O painel grava as alterações no branch main do GitHub e a Netlify publica o novo deploy automaticamente. O arquivo contém os pratos, o rótulo da semana e a validade do cardápio.
 
-1. Atualize o texto do banner da semana (ex.: `Semana de 10/08`).
-2. Edite os itens (`<li>`) de cada dia dentro dos blocos `.day-card`.
-
-> O *hero* e o *carrossel* são gerados dinamicamente a partir dos cards — nenhuma outra alteração é necessária. Ao publicar mudanças estruturais, incremente a versão do cache em `sw.js`.
+Para configurar o acesso ao painel pela primeira vez, consulte admin/README.md.
 
 ---
 
