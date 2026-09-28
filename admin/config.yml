@@ -71,7 +71,4 @@ collections:
                       label: Item
                       name: item
                       widget: string
-                  - label: Destacar como prato principal
-                    name: main
-                    widget: boolean
-                    default: true
+                  
