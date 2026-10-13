@@ -1,11 +1,11 @@
 {
-  "weekLabel": "Semana de 05/10",
-  "validUntil": "2026-10-09T23:59:00-03:00",
+  "weekLabel": "Semana de 12/10",
+  "validUntil": "2026-10-16T23:59:00-03:00",
   "days": [
     {
       "key": "seg",
       "name": "Segunda",
-      "emoji": "🥩",
+      "emoji": "🇧🇷",
       "number": 1,
       "sections": [
         {
@@ -13,8 +13,7 @@
           "title": "Prato Principal",
           "emoji": "🍛",
           "items": [
-            "Carne de Panela",
-            "Linguiça Assada com Cebola e Pimentões"
+            "Feriado"
           ]
         },
         {
@@ -22,9 +21,7 @@
           "title": "Acompanhamentos",
           "emoji": "🍚",
           "items": [
-            "Farofa",
-            "Arroz Branco / Integral",
-            "Feijão Carioca"
+            "Feriado"
           ]
         },
         {
@@ -32,9 +29,7 @@
           "title": "Saladas",
           "emoji": "🥗",
           "items": [
-            "Escarola",
-            "Berinjela",
-            "Beterraba Ralada"
+            "Feriado"
           ]
         },
         {
@@ -42,11 +37,7 @@
           "title": "Sucos",
           "emoji": "🧃",
           "items": [
-            "Limão",
-            "Maçã",
-            "Laranja",
-            "Abacaxi",
-            "Goiaba"
+            "Feriado"
           ]
         },
         {
@@ -54,7 +45,7 @@
           "title": "Sobremesa",
           "emoji": "🍮",
           "items": [
-            "Arroz Doce"
+            "Feriado"
           ]
         }
       ]
@@ -70,8 +61,8 @@
           "title": "Prato Principal",
           "emoji": "🍛",
           "items": [
-            "Sassami Empanado ao Molho Rose",
-            "Iscas de Carne com Cebola Roxa e Ervilha"
+            "Strogonoff de Carne",
+            "Filé de Frango Grelhado"
           ]
         },
         {
@@ -79,7 +70,7 @@
           "title": "Acompanhamentos",
           "emoji": "🍚",
           "items": [
-            "Polenta ao Molho Bolonhesa",
+            "Batata com Chuchu Sauté",
             "Arroz Branco / Integral",
             "Feijão Carioca"
           ]
@@ -89,9 +80,9 @@
           "title": "Saladas",
           "emoji": "🥗",
           "items": [
-            "Alface Crespa",
-            "Chuchu",
-            "Grão de Bico"
+            "Acelga",
+            "Tomate",
+            "Lentilha"
           ]
         },
         {
@@ -111,7 +102,7 @@
           "title": "Sobremesa",
           "emoji": "🍮",
           "items": [
-            "Gelado de Abacaxi"
+            "Mousse de Uva"
           ]
         }
       ]
@@ -127,8 +118,8 @@
           "title": "Prato Principal",
           "emoji": "🍛",
           "items": [
-            "Bife Grelhado",
-            "Nuggets de Frango ao Molho Rose"
+            "Costelinha Suína Assada ao Molho Barbecue",
+            "Iscas de Frango com Brócolis Grelhado"
           ]
         },
         {
@@ -136,9 +127,9 @@
           "title": "Acompanhamentos",
           "emoji": "🍚",
           "items": [
-            "Macarrão com Salsicha",
+            "Abóbora com Bacon",
             "Arroz Branco / Integral",
-            "Feijão Preto"
+            "Feijão Carioca"
           ]
         },
         {
@@ -146,9 +137,9 @@
           "title": "Saladas",
           "emoji": "🥗",
           "items": [
-            "Alface Crespa",
-            "Tomate",
-            "Brócolis"
+            "Chicória com Tomate",
+            "Cenoura Cozida",
+            "Couve-flor"
           ]
         },
         {
@@ -168,7 +159,7 @@
           "title": "Sobremesa",
           "emoji": "🍮",
           "items": [
-            "Mousse Bicolor de Morango com Chocolate"
+            "Gelatina de Limão"
           ]
         }
       ]
@@ -184,8 +175,8 @@
           "title": "Prato Principal",
           "emoji": "🍛",
           "items": [
-            "Filé de Frango Grelhado",
-            "Macarrão à Bolonhesa"
+            "Sobrecoxa Assada",
+            "Iscas de Carne com Vagem na Chapa"
           ]
         },
         {
@@ -193,7 +184,7 @@
           "title": "Acompanhamentos",
           "emoji": "🍚",
           "items": [
-            "Batata Smile",
+            "Macarrão ao Sugo",
             "Arroz Branco / Integral",
             "Feijão Carioca"
           ]
@@ -204,8 +195,8 @@
           "emoji": "🥗",
           "items": [
             "Alface Crespa",
-            "Tomate",
-            "Cenoura Palito"
+            "Beterraba Cozida",
+            "Grão de Bico"
           ]
         },
         {
@@ -225,7 +216,7 @@
           "title": "Sobremesa",
           "emoji": "🍮",
           "items": [
-            "Mosaico de Gelatina Colorida"
+            "Beijinho"
           ]
         }
       ]
@@ -241,8 +232,8 @@
           "title": "Prato Principal",
           "emoji": "🍛",
           "items": [
-            "Lasanha de Frango ao Molho Branco",
-            "Carne Assada"
+            "Bife Grelhado",
+            "Omelete de Queijo com Tomate"
           ]
         },
         {
@@ -250,7 +241,7 @@
           "title": "Acompanhamentos",
           "emoji": "🍚",
           "items": [
-            "Mix de Legumes Sauté",
+            "Arroz Carreteiro",
             "Arroz Branco / Integral",
             "Feijão Carioca"
           ]
@@ -260,8 +251,9 @@
           "title": "Saladas",
           "emoji": "🥗",
           "items": [
-            "Folhas Mistas",
-            "Abobrinha Cozida"
+            "Escarola com Radicchio",
+            "Chuchu com Mandioquinha",
+            "Tomate"
           ]
         },
         {
@@ -281,11 +273,11 @@
           "title": "Sobremesa",
           "emoji": "🍮",
           "items": [
-            "Salada de Frutas"
+            "Mousse de Frutas Cítricas"
           ]
         }
       ]
     }
   ],
-  "appVersion": "11.1"
+  "appVersion": "11.2"
 }
