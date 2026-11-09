@@ -1,11 +1,11 @@
 {
-  "weekLabel": "Semana de 02/11",
-  "validUntil": "2026-11-06T23:59:00-03:00",
+  "weekLabel": "Semana de 09/11",
+  "validUntil": "2026-11-13T23:59:00-03:00",
   "days": [
     {
       "key": "seg",
       "name": "Segunda",
-      "emoji": "🕯️",
+      "emoji": "🥩",
       "number": 1,
       "sections": [
         {
@@ -13,7 +13,8 @@
           "title": "Prato Principal",
           "emoji": "🍛",
           "items": [
-            "Feriado"
+            "Gratinado de Carne Moída c/ Batata",
+            "Iscas de Frango c/ Vagem na Chapa"
           ]
         },
         {
@@ -21,56 +22,7 @@
           "title": "Acompanhamentos",
           "emoji": "🍚",
           "items": [
-            "Feriado"
-          ]
-        },
-        {
-          "type": "salada",
-          "title": "Saladas",
-          "emoji": "🥗",
-          "items": [
-            "Feriado"
-          ]
-        },
-        {
-          "type": "suco",
-          "title": "Sucos",
-          "emoji": "🧃",
-          "items": [
-            "Feriado"
-          ]
-        },
-        {
-          "type": "sobremesa",
-          "title": "Sobremesa",
-          "emoji": "🍮",
-          "items": [
-            "Feriado"
-          ]
-        }
-      ]
-    },
-    {
-      "key": "ter",
-      "name": "Terça",
-      "emoji": "🍖",
-      "number": 2,
-      "sections": [
-        {
-          "type": "prato",
-          "title": "Prato Principal",
-          "emoji": "🍛",
-          "items": [
-            "Filé de Frango Grelhado",
-            "Linguiça Toscana na Chapa com Pimentões"
-          ]
-        },
-        {
-          "type": "acomp",
-          "title": "Acompanhamentos",
-          "emoji": "🍚",
-          "items": [
-            "Brócolis Gratinado",
+            "Brochete c/ Cenoura Refogada",
             "Arroz Branco / Integral",
             "Feijão Carioca"
           ]
@@ -80,64 +32,8 @@
           "title": "Saladas",
           "emoji": "🥗",
           "items": [
-            "Acelga",
-            "Abobrinha c/ Cenoura",
-            "Lentilha c/ Palmito"
-          ]
-        },
-        {
-          "type": "suco",
-          "title": "Sucos",
-          "emoji": "🧃",
-          "items": [
-            "Limão",
-            "Maçã",
-            "Laranja",
-            "Abacaxi",
-            "Goiaba"
-          ]
-        },
-        {
-          "type": "sobremesa",
-          "title": "Sobremesa",
-          "emoji": "🍮",
-          "items": [
-            "Arroz Doce"
-          ]
-        }
-      ]
-    },
-    {
-      "key": "qua",
-      "name": "Quarta",
-      "emoji": "🍖",
-      "number": 3,
-      "sections": [
-        {
-          "type": "prato",
-          "title": "Prato Principal",
-          "emoji": "🍛",
-          "items": [
-            "Feijoada",
-            "Iscas de Frango Grelhado"
-          ]
-        },
-        {
-          "type": "acomp",
-          "title": "Acompanhamentos",
-          "emoji": "🍚",
-          "items": [
-            "Farofa",
-            "Arroz Branco / Integral"
-          ]
-        },
-        {
-          "type": "salada",
-          "title": "Saladas",
-          "emoji": "🥗",
-          "items": [
-            "Couve Manteiga",
-            "Tomate",
+            "Folhas Mistas",
+            "Maracujá c/ Alface e Macarrão",
             "Pepino"
           ]
         },
@@ -158,7 +54,122 @@
           "title": "Sobremesa",
           "emoji": "🍮",
           "items": [
-            "Mousse de Limão"
+            "Mousse de Uva"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ter",
+      "name": "Terça",
+      "emoji": "🍖",
+      "number": 2,
+      "sections": [
+        {
+          "type": "prato",
+          "title": "Prato Principal",
+          "emoji": "🍛",
+          "items": [
+            "Fricassê de Frango",
+            "Picadinho de Carne c/ Legumes"
+          ]
+        },
+        {
+          "type": "acomp",
+          "title": "Acompanhamentos",
+          "emoji": "🍚",
+          "items": [
+            "Purê de Batata",
+            "Arroz Branco / Integral",
+            "Feijão Carioca"
+          ]
+        },
+        {
+          "type": "salada",
+          "title": "Saladas",
+          "emoji": "🥗",
+          "items": [
+            "Alface Crespa",
+            "Tomate c/ Cebola Roxa",
+            "Abóbora Brasileira"
+          ]
+        },
+        {
+          "type": "suco",
+          "title": "Sucos",
+          "emoji": "🧃",
+          "items": [
+            "Limão",
+            "Maçã",
+            "Laranja",
+            "Abacaxi",
+            "Goiaba"
+          ]
+        },
+        {
+          "type": "sobremesa",
+          "title": "Sobremesa",
+          "emoji": "🍮",
+          "items": [
+            "Canjica",
+            "Baunilha"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "qua",
+      "name": "Quarta",
+      "emoji": "🍖",
+      "number": 3,
+      "sections": [
+        {
+          "type": "prato",
+          "title": "Prato Principal",
+          "emoji": "🍛",
+          "items": [
+            "Rocini Assado ao Molho de Mostarda",
+            "Cubos de Frango c/ Legumes"
+          ]
+        },
+        {
+          "type": "acomp",
+          "title": "Acompanhamentos",
+          "emoji": "🍚",
+          "items": [
+            "Farofa de Couve c/ Talos",
+            "Arroz Branco / Integral",
+            "Feijão Carioca"
+          ]
+        },
+        {
+          "type": "salada",
+          "title": "Saladas",
+          "emoji": "🥗",
+          "items": [
+            "Escarola",
+            "Cenoura Palito c/ Casca",
+            "Grão de Bico"
+          ]
+        },
+        {
+          "type": "suco",
+          "title": "Sucos",
+          "emoji": "🧃",
+          "items": [
+            "Limão",
+            "Maçã",
+            "Laranja",
+            "Abacaxi",
+            "Goiaba"
+          ]
+        },
+        {
+          "type": "sobremesa",
+          "title": "Sobremesa",
+          "emoji": "🍮",
+          "items": [
+            "Mousse de Chocolate Branco"
           ]
         }
       ]
@@ -174,8 +185,8 @@
           "title": "Prato Principal",
           "emoji": "🍛",
           "items": [
-            "Rocambole de Carne com Recheio de Provolone",
-            "Galinhada"
+            "Sobrecoxas Assada",
+            "Bife de Panela"
           ]
         },
         {
@@ -183,7 +194,7 @@
           "title": "Acompanhamentos",
           "emoji": "🍚",
           "items": [
-            "Purê de Abóbora",
+            "Macarrão ao Molho Pesto",
             "Arroz Branco / Integral",
             "Feijão Carioca"
           ]
@@ -193,9 +204,9 @@
           "title": "Saladas",
           "emoji": "🥗",
           "items": [
-            "Escarola",
-            "Batata Bolinha",
-            "Grão de Bico"
+            "Alface Lisa",
+            "Tomate",
+            "Cheiro Verde e Cebola"
           ]
         },
         {
@@ -215,7 +226,7 @@
           "title": "Sobremesa",
           "emoji": "🍮",
           "items": [
-            "Creme de Goiabada"
+            "Manjar c/ Calda de Ameixa"
           ]
         }
       ]
@@ -231,8 +242,8 @@
           "title": "Prato Principal",
           "emoji": "🍛",
           "items": [
-            "Filé de Tilápia Empanada ao Molho Tártaro",
-            "Iscas de Carne Grelhada com Cebola Roxa"
+            "Lasanha à Bolonhesa",
+            "Filé de Frango Grelhado"
           ]
         },
         {
@@ -240,7 +251,7 @@
           "title": "Acompanhamentos",
           "emoji": "🍚",
           "items": [
-            "Macarrão ao Sugo",
+            "Berinjela Refogada",
             "Arroz Branco / Integral",
             "Feijão Carioca"
           ]
@@ -250,9 +261,8 @@
           "title": "Saladas",
           "emoji": "🥗",
           "items": [
-            "Chicória",
-            "Beterraba Cozida",
-            "Couve-flor"
+            "Rúcula",
+            "Abobrinha c/ Tomate Seco"
           ]
         },
         {
@@ -272,11 +282,11 @@
           "title": "Sobremesa",
           "emoji": "🍮",
           "items": [
-            "Pudim de Leite Condensado"
+            "Mousse de Gelatina"
           ]
         }
       ]
     }
   ],
-  "appVersion": "11.5"
+  "appVersion": "11.6"
 }
